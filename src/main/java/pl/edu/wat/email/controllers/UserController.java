@@ -25,7 +25,6 @@ public class UserController {
     @GetMapping(path = "/api/confirmation")
     public ResponseEntity<String> confirmedEmail(@RequestParam("token") String token)
     {
-        System.out.println("Weszło halooooooo");
         return new ResponseEntity(emailService.confirmEmail(token), HttpStatus.OK);
     }
 }
